@@ -1,0 +1,49 @@
+{% load i18n %}
+<h1>{% trans "Site Content for Translation" %}</h1>
+<h1>Content Detail</h1>
+<p>{{ content.content_text }}</p> 
+
+<!-- Language selection form -->
+<form method="get" action="{% url 'set_language' %}">
+    <select name="language">
+        <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
+        <option value="es" {% if LANGUAGE_CODE == 'es' %}selected{% endif %}>Spanish</option>
+        <option value="fr" {% if LANGUAGE_CODE == 'fr' %}selected{% endif %}>French</option>
+        <option value="de" {% if LANGUAGE_CODE == 'de' %}selected{% endif %}>German</option>
+        <option value="it" {% if LANGUAGE_CODE == 'it' %}selected{% endif %}>Italian</option>
+        <option value="pt" {% if LANGUAGE_CODE == 'pt' %}selected{% endif %}>Portuguese</option>
+        <option value="ru" {% if LANGUAGE_CODE == 'ru' %}selected{% endif %}>Russian</option>
+        <option value="zh" {% if LANGUAGE_CODE == 'zh' %}selected{% endif %}>Simplified Chinese</option>
+        <option value="zh-TW" {% if LANGUAGE_CODE == 'zh-TW' %}selected{% endif %}>Traditional Chinese</option>
+        <option value="ja" {% if LANGUAGE_CODE == 'ja' %}selected{% endif %}>Japanese</option>
+        <option value="ko" {% if LANGUAGE_CODE == 'ko' %}selected{% endif %}>Korean</option>
+        <option value="ar" {% if LANGUAGE_CODE == 'ar' %}selected{% endif %}>Arabic</option>
+        <option value="hi" {% if LANGUAGE_CODE == 'hi' %}selected{% endif %}>Hindi</option>
+        <option value="bn" {% if LANGUAGE_CODE == 'bn' %}selected{% endif %}>Bengali</option>
+        <option value="pl" {% if LANGUAGE_CODE == 'pl' %}selected{% endif %}>Polish</option>
+        <option value="tr" {% if LANGUAGE_CODE == 'tr' %}selected{% endif %}>Turkish</option>
+        <option value="nl" {% if LANGUAGE_CODE == 'nl' %}selected{% endif %}>Dutch</option>
+        <option value="sv" {% if LANGUAGE_CODE == 'sv' %}selected{% endif %}>Swedish</option>
+        <option value="no" {% if LANGUAGE_CODE == 'no' %}selected{% endif %}>Norwegian</option>
+        <option value="da" {% if LANGUAGE_CODE == 'da' %}selected{% endif %}>Danish</option>
+        <option value="fi" {% if LANGUAGE_CODE == 'fi' %}selected{% endif %}>Finnish</option>
+        <option value="cs" {% if LANGUAGE_CODE == 'cs' %}selected{% endif %}>Czech</option>
+        <option value="ro" {% if LANGUAGE_CODE == 'ro' %}selected{% endif %}>Romanian</option>
+        <option value="el" {% if LANGUAGE_CODE == 'el' %}selected{% endif %}>Greek</option>
+        <option value="th" {% if LANGUAGE_CODE == 'th' %}selected{% endif %}>Thai</option>
+        <option value="id" {% if LANGUAGE_CODE == 'id' %}selected{% endif %}>Indonesian</option>
+        <option value="vi" {% if LANGUAGE_CODE == 'vi' %}selected{% endif %}>Vietnamese</option>
+        <option value="he" {% if LANGUAGE_CODE == 'he' %}selected{% endif %}>Hebrew</option>
+        <option value="ur" {% if LANGUAGE_CODE == 'ur' %}selected{% endif %}>Urdu</option>
+        <option value="ms" {% if LANGUAGE_CODE == 'ms' %}selected{% endif %}>Malay</option>
+        <option value="sw" {% if LANGUAGE_CODE == 'sw' %}selected{% endif %}>Swahili</option>
+        <option value="ta" {% if LANGUAGE_CODE == 'ta' %}selected{% endif %}>Tamil</option>
+        <option value="gu" {% if LANGUAGE_CODE == 'gu' %}selected{% endif %}>Gujarati</option>
+        <option value="ml" {% if LANGUAGE_CODE == 'ml' %}selected{% endif %}>Malayalam</option>
+        <option value="te" {% if LANGUAGE_CODE == 'te' %}selected{% endif %}>Telugu</option>
+        <option value="kn" {% if LANGUAGE_CODE == 'kn' %}selected{% endif %}>Kannada</option>
+        <option value="mr" {% if LANGUAGE_CODE == 'mr' %}selected{% endif %}>Marathi</option>
+        <option value="pa" {% if LANGUAGE_CODE == 'pa' %}selected{% endif %}>Punjabi</option>
+    </select>
+    <button type="submit">Change Language</button>
+</form>
